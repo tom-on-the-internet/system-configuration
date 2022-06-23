@@ -1,13 +1,7 @@
-# Home-manager configuration for old-laptop
-
 { pkgs, ... }:
 
 {
-  imports = [
-    ../../modules/desktop/hyprland/home.nix # Window Manager
-  ];
+  imports = [ ];
 
-  home = { # Specific packages for old-laptop
-    packages = with pkgs; [ ];
-  };
+  home = { packages = with pkgs; [ ]; };
 }

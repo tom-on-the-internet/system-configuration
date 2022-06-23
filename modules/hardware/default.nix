@@ -1,1 +1,1 @@
-[ ./dslr.nix ./bluetooth.nix ]
+[ ./bluetooth.nix ]

@@ -1,6 +1,13 @@
 { config, lib, pkgs, inputs, user, location, ... }:
 
 {
+  imports = [
+    ../modules/dropbox
+    inputs.kmonad.nixosModules.default
+    ../modules/desktop/sway/sway.nix
+    ../modules/desktop/sway/waybar.nix
+  ];
+
   users.users.${user} = {
     isNormalUser = true;
     extraGroups = [
@@ -13,7 +20,7 @@
       "scanner"
       "kvm"
     ];
-    shell = pkgs.zsh; # Default shell
+    shell = pkgs.zsh;
   };
 
   security.sudo.wheelNeedsPassword = false;
@@ -22,8 +29,8 @@
   i18n = { defaultLocale = "en_US.UTF-8"; };
 
   console = {
-    font = "Lat2-Terminus16";
-    keyMap = "us";
+    font = "ter-powerline-v24b";
+    packages = [ pkgs.terminus_font pkgs.powerline-fonts ];
   };
 
   security.rtkit.enable = true;
@@ -33,23 +40,40 @@
     mediaKeys = { enable = true; };
   };
 
-  fonts.fonts = with pkgs; [
-    carlito
-    vegur
-    source-code-pro
-    jetbrains-mono
-    font-awesome
-    corefonts
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
-  ];
+  fonts = {
+    fonts = with pkgs; [
+      carlito
+      corefonts
+      dina-font
+      font-awesome
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
+      proggyfonts
+      vegur
+      (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" "Hermit" ]; })
+    ];
+
+    enableDefaultFonts = true;
+    fontDir.enable = true;
+
+    fontconfig = {
+      defaultFonts = {
+        # serif = [ "Vazir" "Ubuntu" ];
+        # sansSerif = [ "Vazir" "Ubuntu" ];
+        monospace = [ "Hurmit Nerd Font" ];
+      };
+    };
+  };
 
   environment = {
     variables = {
-      TERMINAL = "kitty";
+      TERMINAL = "foot";
       EDITOR = "nvim";
       VISUAL = "nvim";
+      NIXOS_OZONE_WL = "1";
     };
-    systemPackages = with pkgs; [ vim git wget light udiskie ];
+    systemPackages = with pkgs; [ git light pamixer udiskie vim wget ];
   };
 
   services = {
@@ -63,6 +87,20 @@
     };
 
     openssh = { enable = true; };
+
+    kmonad = {
+      enable = true;
+
+      keyboards.internal = {
+        device = "/dev/input/by-path/platform-i8042-serio-0-event-kbd";
+        config = builtins.readFile ../rsc/tom.kbd;
+
+        defcfg = {
+          enable = true;
+          fallthrough = true;
+        };
+      };
+    };
   };
 
   nix = { # Nix Package Manager settings
@@ -85,7 +123,36 @@
     '';
   };
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = { allowUnfree = true; };
+
+  networking = {
+    useDHCP = false; # Deprecated
+    networkmanager.enable = true;
+  };
+
+  xdg = {
+    portal = {
+      enable = true;
+      wlr.enable = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-wlr
+        xdg-desktop-portal-gtk
+      ];
+      gtkUsePortal = true;
+    };
+  };
+
+  programs = {
+    dconf.enable = true;
+    light.enable = true;
+  };
+
+  services = {
+    tlp.enable = true;
+    auto-cpufreq.enable = true;
+    blueman.enable = true;
+    deluge.enable = true;
+  };
 
   system = { # NixOS settings
     autoUpgrade = { # Allow auto update

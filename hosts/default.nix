@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, home-manager, nur, user, location, hyprland, ... }:
+{ lib, inputs, nixpkgs, home-manager, nur, user, location, ... }:
 
 let
   system = "x86_64-linux";
@@ -12,9 +12,9 @@ let
 in {
   old-thinkpad = lib.nixosSystem {
     inherit system;
-    specialArgs = { inherit inputs user location hyprland; };
+    specialArgs = { inherit inputs user location; };
     modules = [
-      hyprland.nixosModules.default
+      nur.nixosModules.nur
       ./old-thinkpad
       ./configuration.nix
 
@@ -26,6 +26,26 @@ in {
         home-manager.users.${user} = {
           imports = [ (import ./home.nix) ]
             ++ [ (import ./old-thinkpad/home.nix) ];
+        };
+      }
+    ];
+  };
+
+  tombook = lib.nixosSystem {
+    inherit system;
+    specialArgs = { inherit inputs user location; };
+    modules = [
+      nur.nixosModules.nur
+      ./tombook
+      ./configuration.nix
+
+      home-manager.nixosModules.home-manager
+      {
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        home-manager.extraSpecialArgs = { inherit user; };
+        home-manager.users.${user} = {
+          imports = [ (import ./home.nix) ] ++ [ (import ./tombook/home.nix) ];
         };
       }
     ];

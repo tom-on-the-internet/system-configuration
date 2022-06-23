@@ -19,21 +19,19 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "github:vaxerski/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    kmonad.url = "github:kmonad/kmonad?dir=nix";
+
   };
 
-  outputs =
-    inputs@{ self, nixpkgs, home-manager, darwin, nur, nixgl, hyprland, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nur, nixgl, ... }:
     let
       user = "tom";
       location = "$HOME/.setup";
+
     in {
       nixosConfigurations = (import ./hosts {
         inherit (nixpkgs) lib;
-        inherit inputs nixpkgs home-manager nur user location hyprland;
+        inherit inputs nixpkgs home-manager nur user location;
       });
     };
 }

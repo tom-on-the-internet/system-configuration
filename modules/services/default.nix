@@ -1,4 +1,1 @@
-[
-  ./udiskie.nix
-]
-
+[ ./udiskie.nix ]
