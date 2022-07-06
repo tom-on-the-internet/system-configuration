@@ -149,6 +149,7 @@
       exec dropbox start
       exec blueman-applet
       exec copyq
+      exec_always autotiling
 
       # Don't show borders unless there's more than one visible window.
       smart_borders on
@@ -158,7 +159,7 @@
       bindsym XF86MonBrightnessDown exec light -U 10
       bindsym XF86MonBrightnessUp exec light -A 10
 
-      bindsym $mod+Semicolon exec copyq toggle
+      bindsym $mod+Semicolon exec copyq show
 
       # Volume
       bindsym {

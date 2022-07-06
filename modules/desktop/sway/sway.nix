@@ -46,6 +46,7 @@ in {
 
   environment = {
     systemPackages = with pkgs; [
+      autotiling
       configure-gtk
       copyq
       dbus-sway-environment
