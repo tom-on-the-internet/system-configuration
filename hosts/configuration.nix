@@ -46,6 +46,7 @@
       corefonts
       dina-font
       font-awesome
+      google-fonts
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji

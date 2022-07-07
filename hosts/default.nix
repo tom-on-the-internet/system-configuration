@@ -9,6 +9,31 @@ let
   };
 
   lib = nixpkgs.lib;
+  go-overlay = final: prev: {
+    golines = pkgs.buildGo118Module rec {
+      pname = "golines";
+      version = "0.10.0";
+      src = pkgs.fetchFromGitHub {
+        owner = "segmentio";
+        repo = "golines";
+        rev = "v${version}";
+        sha256 = "sha256-Mi3LBE4+LWmNwyMeLr3ucMictMMQv2vzfWtJyCfOsHE=";
+      };
+      vendorSha256 = "sha256-rxYuzn4ezAxaeDhxd8qdOzt+CKYIh03A9zKNdzILq18=";
+    };
+
+    gow = pkgs.buildGo118Module rec {
+      pname = "gow";
+      version = "0.0.0";
+      src = pkgs.fetchFromGitHub {
+        owner = "mitranim";
+        repo = "gow";
+        rev = "e9d92c985e03650350703af63f72c4f2be5a1e79";
+        sha256 = "sha256-QUIEWjY5yYIidj2yjO5SdSfCqr4TQD9M4d3q7VTI3ps=";
+      };
+      vendorSha256 = "sha256-o6KltbjmAN2w9LMeS9oozB0qz9tSMYmdDW3CwUNChzA=";
+    };
+  };
 in {
   old-thinkpad = lib.nixosSystem {
     inherit system;
@@ -17,6 +42,7 @@ in {
       nur.nixosModules.nur
       ./old-thinkpad
       ./configuration.nix
+      ({ config, pkgs, ... }: { nixpkgs.overlays = [ go-overlay ]; })
 
       home-manager.nixosModules.home-manager
       {
@@ -38,6 +64,7 @@ in {
       nur.nixosModules.nur
       ./tombook
       ./configuration.nix
+      ({ config, pkgs, ... }: { nixpkgs.overlays = [ go-overlay ]; })
 
       home-manager.nixosModules.home-manager
       {

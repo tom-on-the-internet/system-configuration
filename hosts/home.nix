@@ -15,6 +15,9 @@
       bat
       exa
       feh
+      go_1_18
+      golines
+      gow
       gnumake
       kdenlive
       killall
@@ -37,7 +40,6 @@
 
   programs = {
     home-manager = { enable = true; };
-    go = { enable = true; };
     google-chrome = { enable = true; };
     fzf = {
       enable = true;

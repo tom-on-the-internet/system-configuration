@@ -153,7 +153,9 @@
 
       # Don't show borders unless there's more than one visible window.
       smart_borders on
+
       seat * hide_cursor 10000
+      focus_follows_mouse no
 
       # Brightness
       bindsym XF86MonBrightnessDown exec light -U 10
