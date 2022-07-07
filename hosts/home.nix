@@ -15,10 +15,10 @@
       bat
       exa
       feh
+      gnumake
       go_1_18
       golines
       gow
-      gnumake
       kdenlive
       killall
       mpv
@@ -28,6 +28,7 @@
       ripgrep
       rsync
       slack
+      stylua
       tealdeer
       unrar
       unzip
