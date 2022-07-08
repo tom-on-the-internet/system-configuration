@@ -151,7 +151,7 @@ lspconfig.golangci_lint_ls.setup({
 			"golangci-lint",
 			"run",
 			"-c",
-			"~/.golangci.yaml",
+			"~/.config/golangci/golangci.yaml",
 		},
 	},
 })

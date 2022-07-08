@@ -18,6 +18,21 @@ let
     in pkgs.lib.strings.concatMapStringsSep "\n" read files;
 
 in {
+  home.file = {
+    ".config/golangci/golangci.yaml".text = ''
+      output:
+        format: json
+      linters:
+        enable-all: true
+        disable:
+          - lll
+      linters-settings:
+        varnamelen:
+          ignore-decls:
+            - w http.ResponseWriter
+            - r *http.Request
+    '';
+  };
   programs.neovim = {
     enable = true;
 

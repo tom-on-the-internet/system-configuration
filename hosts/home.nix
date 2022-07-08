@@ -18,8 +18,10 @@
       gcc
       gnumake
       go_1_18
+      golangci-lint
       golangci-lint-langserver
       golines
+      gofumpt
       gopls
       gotest
       gotests
