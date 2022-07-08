@@ -21,21 +21,7 @@ in {
   programs.neovim = {
     enable = true;
 
-    extraPackages = with pkgs; [
-      gcc
-      go
-      nodePackages.eslint_d
-      gotools
-      golangci-lint-langserver
-      # golines
-      gopls
-      gotest
-      gotests
-      hadolint
-      nodePackages.markdownlint-cli2
-      shellcheck
-      shfmt
-    ];
+    extraPackages = with pkgs; [ ];
 
     plugins = with pkgs.vimPlugins; [{ plugin = telescope-fzf-native-nvim; }];
 

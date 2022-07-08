@@ -42,7 +42,9 @@ in {
       nur.nixosModules.nur
       ./old-thinkpad
       ./configuration.nix
-      ({ config, pkgs, ... }: { nixpkgs.overlays = [ go-overlay ]; })
+      ({ config, pkgs, ... }: {
+        nixpkgs.overlays = [ go-overlay inputs.nvim-overlay.overlay ];
+      })
 
       home-manager.nixosModules.home-manager
       {

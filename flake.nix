@@ -21,6 +21,7 @@
 
     kmonad.url = "github:kmonad/kmonad?dir=nix";
 
+    nvim-overlay = { url = "github:nix-community/neovim-nightly-overlay"; };
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, nur, nixgl, ... }:

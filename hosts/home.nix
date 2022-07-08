@@ -15,23 +15,38 @@
       bat
       exa
       feh
+      gcc
       gnumake
       go_1_18
+      golangci-lint-langserver
       golines
+      gopls
+      gotest
+      gotests
+      gotools
       gow
+      hadolint
       kdenlive
       killall
+      mdl
       mpv
       nixfmt
+      nodePackages.eslint_d
+      nodePackages.prettier
+      node2nix
+      nodejs
       pavucontrol
       pcmanfm
       ripgrep
       rsync
+      shellcheck
+      shfmt
       slack
       stylua
       tealdeer
       unrar
       unzip
+      yarn2nix
     ];
 
     file.".config/wall".source = ../rsc/wall;

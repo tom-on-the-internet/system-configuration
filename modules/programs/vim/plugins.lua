@@ -36,7 +36,7 @@ require("packer").startup(function()
 	use("onsails/lspkind-nvim")
 	use("rafamadriz/friendly-snippets")
 	use("ray-x/go.nvim")
-    use("daschw/leaf.nvim")
+	use("daschw/leaf.nvim")
 	use("saadparwaiz1/cmp_luasnip")
 	use("tpope/vim-abolish")
 	use("tpope/vim-commentary")
@@ -50,7 +50,7 @@ require("packer").startup(function()
 end)
 
 require("telescope").setup({})
-require('telescope').load_extension('fzf')
+require("telescope").load_extension("fzf")
 
 function find_files_all()
 	require("telescope.builtin").find_files({ hidden = true, no_ignore = true })
@@ -72,7 +72,7 @@ require("nvim-tree").setup({
 		},
 	},
 	renderer = {
-        highlight_opened_files = "all"
+		highlight_opened_files = "all",
 	},
 })
 
@@ -198,19 +198,17 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 vim.diagnostic.config({ float = { border = "single" } })
 
 require("leaf").setup({
-    undercurl = true,
-    commentStyle = "italic",
-    functionStyle = "NONE",
-    keywordStyle = "italic",
-    statementStyle = "bold",
-    typeStyle = "NONE",
-    variablebuiltinStyle = "italic",
-    transparent = true,
-    colors = {},
-    overrides = {},
-    theme = "darkest", -- default, alternatives: "dark", "lighter", "darker", "lightest", "darkest"
+	undercurl = true,
+	commentStyle = "italic",
+	functionStyle = "NONE",
+	keywordStyle = "italic",
+	statementStyle = "bold",
+	typeStyle = "NONE",
+	variablebuiltinStyle = "italic",
+	transparent = true,
+	colors = {},
+	overrides = {},
+	theme = "darkest", -- default, alternatives: "dark", "lighter", "darker", "lightest", "darkest"
 })
 
 vim.cmd("colorscheme leaf")
-
-

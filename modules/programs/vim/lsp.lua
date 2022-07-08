@@ -3,13 +3,16 @@ local configs = require("lspconfig/configs")
 
 local lsp_formatting = function(bufnr)
 	vim.lsp.buf.format({
+		bufnr = bufnr,
 		filter = function(clients)
 			-- filter out clients that you don't want to use
 			return vim.tbl_filter(function(client)
-				return client.name ~= "tsserver" and client.name ~= "gopls" and client.name ~= "intelephense"
+				if client and client.name then
+					return client.name ~= "tsserver" and client.name ~= "gopls" and client.name ~= "intelephense"
+				end
+				return false
 			end, clients)
 		end,
-		bufnr = bufnr,
 	})
 end
 
@@ -76,11 +79,11 @@ local hover = null_ls.builtins.hover
 
 null_ls.setup({
 	sources = {
-		diagnostics.markdownlint,
+		diagnostics.mdl,
 		diagnostics.eslint,
 		code_actions.eslint,
 		code_actions.shellcheck,
-		formatting.prettierd.with({
+		formatting.prettier.with({
 			prefer_local = "node_modules/.bin",
 			filetypes = {
 				"javascript",
