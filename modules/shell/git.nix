@@ -5,7 +5,10 @@
       userName = "Thomas Steven";
       userEmail = "thomaspatricksteven@gmail.com";
       delta = { enable = true; };
-      extraConfig = { init = { defaultBranch = "main"; }; };
+      extraConfig = {
+        init = { defaultBranch = "main"; };
+        help = { autocorrect = "immediate"; };
+      };
     };
   };
 }
