@@ -101,6 +101,16 @@
           fallthrough = true;
         };
       };
+
+      keyboards.shinobi = {
+        device = "/dev/input/by-path/pci-0000:00:14.0-usb-0:1.2:1.0-event-kbd";
+        config = builtins.readFile ../rsc/tom.kbd;
+
+        defcfg = {
+          enable = true;
+          fallthrough = true;
+        };
+      };
     };
   };
 
