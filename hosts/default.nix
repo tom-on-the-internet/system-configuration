@@ -79,4 +79,25 @@ in {
       }
     ];
   };
+
+  workbook = lib.nixosSystem {
+    inherit system;
+    specialArgs = { inherit inputs user location; };
+    modules = [
+      nur.nixosModules.nur
+      ./workbook
+      ./configuration.nix
+      ({ config, pkgs, ... }: { nixpkgs.overlays = [ go-overlay ]; })
+
+      home-manager.nixosModules.home-manager
+      {
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        home-manager.extraSpecialArgs = { inherit user; };
+        home-manager.users.${user} = {
+          imports = [ (import ./home.nix) ] ++ [ (import ./workbook/home.nix) ];
+        };
+      }
+    ];
+  };
 }

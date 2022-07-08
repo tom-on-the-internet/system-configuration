@@ -7,6 +7,6 @@
 
   programs.git = {
     userName = "Thomas Steven";
-    userEmail = "thomaspatricksteven@gmail.com";
+    userEmail = "thomas@humi.ca";
   };
 }
