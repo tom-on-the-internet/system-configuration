@@ -13,7 +13,7 @@
         dc = "docker compose";
         e = "nvim";
         ec = "nvim --clean";
-        ll = "ls -alh";
+        ll = "ls -al";
         ls = "exa --group-directories-first --icons --color-scale";
         mkdir = "mkdir -vp";
         mv = "mv -iv";

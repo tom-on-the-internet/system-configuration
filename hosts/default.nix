@@ -33,6 +33,7 @@ let
       };
       vendorSha256 = "sha256-o6KltbjmAN2w9LMeS9oozB0qz9tSMYmdDW3CwUNChzA=";
     };
+
   };
 in {
   old-thinkpad = lib.nixosSystem {
@@ -66,7 +67,9 @@ in {
       nur.nixosModules.nur
       ./tombook
       ./configuration.nix
-      ({ config, pkgs, ... }: { nixpkgs.overlays = [ go-overlay ]; })
+      ({ config, pkgs, ... }: {
+        nixpkgs.overlays = [ go-overlay inputs.nvim-overlay.overlay ];
+      })
 
       home-manager.nixosModules.home-manager
       {
@@ -87,7 +90,9 @@ in {
       nur.nixosModules.nur
       ./workbook
       ./configuration.nix
-      ({ config, pkgs, ... }: { nixpkgs.overlays = [ go-overlay ]; })
+      ({ config, pkgs, ... }: {
+        nixpkgs.overlays = [ go-overlay inputs.nvim-overlay.overlay ];
+      })
 
       home-manager.nixosModules.home-manager
       {

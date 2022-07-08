@@ -1,5 +1,3 @@
-" colorscheme leaf
-
 set number
 set noswapfile
 set completeopt=menu,menuone,noselect
@@ -65,9 +63,6 @@ command! Now r!date
 
 " Nvim-tree
 autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
-
-" Formatting using available formatters
-autocmd BufWritePre * :silent! :lua vim.lsp.buf.formatting_sync(nil,1000)
 
 " Resize buffers when window changes sizes
 autocmd VimResized * execute "normal! \<c-w>="
