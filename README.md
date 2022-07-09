@@ -6,6 +6,7 @@ Hello. This is my system configuration using NixOS.
 
 ## TODO
 
-Sway with external display
-Kmonad working with external keyboard
+move monitor script into config
+ensure clamshell works
 Kmonad layer (caps ctrl)
+spellcheck

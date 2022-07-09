@@ -173,18 +173,7 @@ require("indent_blankline").setup({
 
 require("go").setup()
 
-require("todo-comments").setup({
-	keywords = {
-		QUESTION = { icon = " ", color = "#FF43FF" },
-		WORKED_ON = { icon = "華", color = "#22EE00" },
-	},
-	highlight = {
-		pattern = [[.*<(KEYWORDS)\s*]], -- pattern or table of patterns, used for highlightng (vim regex)
-	},
-	search = {
-		pattern = [[\b(KEYWORDS)\b]], -- match without the extra colon. You'll likely get false positives
-	},
-})
+require("todo-comments").setup({})
 
 vim.cmd([[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]])
 

@@ -26,6 +26,7 @@ in {
         enable-all: true
         disable:
           - lll
+          - forbidigo
       linters-settings:
         varnamelen:
           ignore-decls:
