@@ -100,6 +100,8 @@ function find_files_all()
 	require("telescope.builtin").find_files({ hidden = true, no_ignore = true })
 end
 
+require("lualine").setup({ options = { theme = "leaf" } })
+
 require("colorizer").setup({ "*" })
 
 require("nvim-tree").setup({
