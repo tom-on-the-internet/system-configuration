@@ -10,3 +10,4 @@ move monitor script into config
 ensure clamshell works
 Kmonad layer (caps ctrl)
 spellcheck
+play around with telescope

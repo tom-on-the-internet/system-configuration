@@ -13,15 +13,18 @@
     packages = with pkgs; [
       asciiquarium
       bat
+      btop
       exa
+      fd
       feh
       gcc
+      gimp
       gnumake
       go_1_18
+      gofumpt
       golangci-lint
       golangci-lint-langserver
       golines
-      gofumpt
       gopls
       gotest
       gotests
@@ -29,17 +32,20 @@
       gow
       hadolint
       kdenlive
+      ksnip
       killall
       mdl
       mpv
       nixfmt
+      node2nix
       nodePackages.eslint_d
       nodePackages.prettier
-      node2nix
       nodejs
       pavucontrol
       pcmanfm
+      pinta
       ripgrep
+      rofimoji
       rsync
       shellcheck
       shfmt
@@ -70,8 +76,8 @@
     network-manager-applet.enable = true;
     wlsunset = {
       enable = true;
-      latitude = "27.2";
-      longitude = "77.5";
+      latitude = "43.20";
+      longitude = "-79.23";
     };
   };
 }

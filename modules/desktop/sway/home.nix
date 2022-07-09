@@ -14,10 +14,6 @@
       set $laptop "eDP-1"
       set $benq "BenQ Corporation BenQ LCD DAJ00379019"
 
-      output $laptop res 3840x2160 scale 2
-      bindswitch --reload --locked lid:on output $laptop disable
-      bindswitch --reload --locked lid:off output $laptop enable
-
       exec swayidle -w \
         timeout 300  'swaylock' \
         timeout 480  'swaymsg "output * dpms off"' \
@@ -155,8 +151,8 @@
       exec dropbox start
       exec blueman-applet
       exec copyq
+      exec ksnip
       exec_always autotiling
-      exec_always ~/temp/display-config.sh
 
       # Don't show borders unless there's more than one visible window.
       smart_borders on
@@ -169,6 +165,8 @@
       bindsym XF86MonBrightnessUp exec light -A 10
 
       bindsym $mod+Semicolon exec copyq show
+      bindsym $mod+i exec grim -g "$(slurp)" - | wl-copy -f -t image/png
+      bindsym $mod+m exec /home/tom/temp/display-config.sh
 
       # Volume
       bindsym {
