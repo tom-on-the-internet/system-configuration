@@ -112,7 +112,6 @@
         layer = "top";
         position = "top";
         height = 30;
-        output = [ "eDP-1" ];
         tray = {
           icon-size = 14;
           spacing = 10;
@@ -130,7 +129,6 @@
           "network"
           "tray"
         ];
-
         "sway/workspaces" = {
           format = "<span font='14'>{icon}</span>";
           format-icons = {

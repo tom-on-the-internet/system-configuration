@@ -11,8 +11,6 @@
       set $right l
       set $term footclient
       set $menu rofi -show drun
-      set $laptop "eDP-1"
-      set $benq "BenQ Corporation BenQ LCD DAJ00379019"
 
       exec swayidle -w \
         timeout 300  'swaylock' \
@@ -143,16 +141,23 @@
       gaps inner 10
 
       include @sysconfdir@/sway/config.d/*
-      exec dbus-sway-environment
-      exec configure-gtk
-      exec swaybg -m fill -i $HOME/.config/wall
-      exec foot -Ss
-      exec google-chrome-stable --no-startup-window
-      exec dropbox start
-      exec blueman-applet
-      exec copyq
-      exec ksnip
-      exec_always autotiling
+
+      exec {
+        dbus-sway-environment
+        configure-gtk
+        swaybg -m fill -i $HOME/.config/wall
+        foot -Ss
+        google-chrome-stable --no-startup-window
+        dropbox start
+        blueman-applet
+        copyq
+        ksnip
+      }
+
+      exec_always {
+        autotiling
+        kanshi
+      }
 
       # Don't show borders unless there's more than one visible window.
       smart_borders on

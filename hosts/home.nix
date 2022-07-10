@@ -31,6 +31,7 @@
       gotools
       gow
       hadolint
+      kanshi
       kdenlive
       ksnip
       killall
@@ -78,6 +79,30 @@
       enable = true;
       latitude = "43.20";
       longitude = "-79.23";
+    };
+    kanshi = {
+      enable = true;
+      profiles = {
+        laptop = {
+          outputs = [{
+            criteria = "eDP-1";
+            status = "enable";
+            scale = 2.0;
+          }];
+        };
+        desktop = {
+          outputs = [
+            {
+              criteria = "eDP-1";
+              status = "disable";
+            }
+            {
+              criteria = "BenQ Corporation BenQ LCD DAJ00379019";
+              status = "enable";
+            }
+          ];
+        };
+      };
     };
   };
 }
