@@ -17,6 +17,7 @@
       exa
       fd
       feh
+      file
       gcc
       gimp
       gnumake
@@ -33,8 +34,8 @@
       hadolint
       kanshi
       kdenlive
-      ksnip
       killall
+      ksnip
       mdl
       mpv
       nixfmt
@@ -42,9 +43,8 @@
       nodePackages.eslint_d
       nodePackages.prettier
       nodejs
-      pavucontrol
       pcmanfm
-      pinta
+      pulsemixer
       ripgrep
       rofimoji
       rsync
@@ -54,6 +54,7 @@
       stylua
       tealdeer
       unrar
+      unzip
       unzip
       yarn2nix
     ];

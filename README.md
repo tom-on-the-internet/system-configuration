@@ -4,10 +4,11 @@
 
 Hello. This is my system configuration using NixOS.
 
+This replaces my dotfiles.
+
 ## TODO
 
-move monitor script into config
-ensure clamshell works
 Kmonad layer (caps ctrl)
 spellcheck
 play around with telescope
+maybe show bar should be a different config

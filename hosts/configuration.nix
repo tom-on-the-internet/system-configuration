@@ -63,6 +63,7 @@
         # serif = [ "Vazir" "Ubuntu" ];
         # sansSerif = [ "Vazir" "Ubuntu" ];
         monospace = [ "Hurmit Nerd Font" ];
+        emoji = [ "Noto Color Emoji" ];
       };
     };
   };

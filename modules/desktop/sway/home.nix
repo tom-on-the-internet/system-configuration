@@ -132,7 +132,7 @@
         swaybar_command waybar
         position top
         mode hide
-        modifier mod4
+        modifier $mod+shift
       }
 
       default_border pixel 1
@@ -152,6 +152,7 @@
         blueman-applet
         copyq
         ksnip
+        udiskie
       }
 
       exec_always {
@@ -171,6 +172,8 @@
 
       bindsym $mod+Semicolon exec copyq show
       bindsym $mod+i exec grim -g "$(slurp)" - | wl-copy -f -t image/png
+      bindsym $mod+e exec rofimoji -a copy
+      bindsym $mod+y exec makoctl dismiss -a
       bindsym $mod+m exec /home/tom/temp/display-config.sh
 
       # Volume
