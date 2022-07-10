@@ -11,4 +11,4 @@ This replaces my dotfiles.
 Kmonad layer (caps ctrl)
 spellcheck
 play around with telescope
-maybe show bar should be a different config
+install intelephense
