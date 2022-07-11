@@ -22,7 +22,7 @@ local default = function(client, bufnr)
 	vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = 0 })
 	vim.keymap.set("n", "gr", telescope.lsp_references, { buffer = 0 })
 	vim.keymap.set("n", "gw", telescope.lsp_document_symbols, { buffer = 0 })
-	vim.keymap.set("n", "g?", vim.lsp.diagnostic.show_line_diagnostics, { buffer = 0 })
+	-- vim.keymap.set("n", "g?", vim.lsp.diagnostic.show_line_diagnostics, { buffer = 0 })
 	vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = 0 })
 	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = 0 })
 	vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next, { buffer = 0 })
@@ -47,6 +47,28 @@ lspconfig.gopls.setup({
 	on_attach = function(client, bufnr)
 		default(client, bufnr)
 	end,
+	settings = {
+		gopls = {
+			analyses = {
+				nilness = true,
+				unusedparams = true,
+				useany = true,
+				unusedwrite = true,
+			},
+			staticcheck = true,
+			usePlaceholders = true,
+			experimentalUseInvalidMetadata = true,
+			hints = {
+				assignVariableTypes = true,
+				compositeLiteralFields = true,
+				compositeLiteralTypes = true,
+				constantValues = true,
+				functionTypeParameters = true,
+				parameterNames = true,
+				rangeVariableTypes = true,
+			},
+		},
+	},
 })
 
 -- Tom, at some point you want to start using typescript.nvim
