@@ -12,7 +12,6 @@ require("packer").startup(function()
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jose-elias-alvarez/nvim-lsp-ts-utils")
 	use("junegunn/fzf.vim")
-	use("kamykn/spelunker.vim")
 	use("kosayoda/nvim-lightbulb")
 	use("kyazdani42/nvim-tree.lua")
 	use("kyazdani42/nvim-web-devicons")
@@ -24,6 +23,8 @@ require("packer").startup(function()
 		end,
 	})
 	use("lukas-reineke/cmp-rg")
+	use("kamykn/spelunker.vim")
+	use("kamykn/popup-menu.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("neoclide/jsonc.vim")
 	use("neovim/nvim-lspconfig")
@@ -151,6 +152,7 @@ cmp.setup({
 		{ name = "buffer", keyword_length = 3 },
 		{ name = "rg", keyword_length = 3 },
 		{ name = "path", keyword_length = 5 },
+		{ name = "spell" },
 	},
 	formatting = {
 		format = require("lspkind").cmp_format({

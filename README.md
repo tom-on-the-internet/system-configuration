@@ -11,4 +11,3 @@ This replaces my dotfiles.
 Kmonad layer (caps ctrl)
 spellcheck
 play around with telescope
-install intelephense

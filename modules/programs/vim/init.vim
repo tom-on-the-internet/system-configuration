@@ -1,33 +1,33 @@
-set number
-set noswapfile
-set completeopt=menu,menuone,noselect
-set signcolumn=yes
-set nospell
-set undodir=$HOME/nvim/undo
-set undofile
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch
-set splitbelow
-set splitright
-set noswapfile
-set hidden
-set wildmenu
-" set wildmode=longest,list,full
-set tabstop=4       " number of visual spaces per TAB
-set softtabstop=4   " number of spaces in tab when editing
-set shiftwidth=4    " number of spaces to use for autoindent
-set expandtab       " tabs are space
 set autoindent
-set copyindent      " copy indent from the previous line
-set updatetime=1000
-set laststatus=3 " global status line
-set fillchars=horiz:━,horizup:┻,horizdown:┳,vert:┃,vertleft:┨,vertright:┣,verthoriz:╋
-
 set breakindent
 set breakindentopt=shift:2
+set completeopt=menu,menuone,noselect
+set copyindent      " copy indent from the previous line
+set expandtab       " tabs are space
+set fillchars=horiz:━,horizup:┻,horizdown:┳,vert:┃,vertleft:┨,vertright:┣,verthoriz:╋
+set hidden
+set hlsearch
+set ignorecase
+set incsearch
+set laststatus=3 " global status line
+set nospell
+set noswapfile
+set noswapfile
+set number
+set shiftwidth=4    " number of spaces to use for autoindent
 set showbreak=↳
+set signcolumn=yes
+set smartcase
+set softtabstop=4   " number of spaces in tab when editing
+set spellsuggest+=10
+set spellfile=~/.setup/rsc/en.utf-8.add
+set splitbelow
+set splitright
+set tabstop=4       " number of visual spaces per TAB
+set undodir=$HOME/nvim/undo
+set undofile
+set updatetime=1000
+set wildmenu
 
 " Bindings
 nnoremap <SPACE> <Nop>

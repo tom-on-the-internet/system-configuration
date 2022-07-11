@@ -41,6 +41,7 @@
       nixfmt
       node2nix
       nodePackages.eslint_d
+      nodePackages.intelephense
       nodePackages.prettier
       nodejs
       pcmanfm
