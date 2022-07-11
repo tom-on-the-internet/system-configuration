@@ -149,7 +149,6 @@
         dropbox start
         blueman-applet
         copyq
-        ksnip
         udiskie
       }
 
