@@ -119,7 +119,7 @@
       bindsym $mod+v splitv
 
       # Make the current focus fullscreen
-      bindsym $mod+f fullscreen
+      bindsym $mod+shift+f fullscreen
 
       # Toggle the current focus between tiling and floating mode
       bindsym $mod+Shift+space floating toggle
@@ -131,8 +131,6 @@
       bar {
         swaybar_command waybar
         position top
-        mode hide
-        modifier $mod+shift
       }
 
       default_border pixel 1
@@ -175,6 +173,7 @@
       bindsym $mod+e exec rofimoji -a copy
       bindsym $mod+y exec makoctl dismiss -a
       bindsym $mod+m exec /home/tom/temp/display-config.sh
+      bindsym $mod+f exec killall -SIGUSR1 .waybar-wrapped
 
       # Volume
       bindsym {
