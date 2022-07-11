@@ -14,9 +14,9 @@
 
       exec swayidle -w \
         timeout 300  'swaylock' \
-        timeout 480  'swaymsg "output * dpms off"' \
+        timeout 1480  'swaymsg "output * dpms off"' \
         resume  'swaymsg "output * dpms on"' \
-        timeout 1020 'systemctl suspend' \
+        timeout 2020 'systemctl suspend' \
         before-sleep 'swaylock'
 
       # This will lock your screen after 300 seconds of inactivity, then turn off
