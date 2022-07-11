@@ -36,6 +36,7 @@
       hadolint
       kanshi
       kdenlive
+      jq
       killall
       ksnip
       mdl
