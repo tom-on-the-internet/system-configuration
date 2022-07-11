@@ -16,3 +16,4 @@ This replaces my dotfiles.
 - mycli
 - pgcli
 - terminal urls
+- figure out nlreturn https://github.com/ssgreg/nlreturn (block size 2)
