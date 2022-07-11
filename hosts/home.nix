@@ -31,6 +31,7 @@
       gotests
       gotools
       gow
+      grc
       hadolint
       kanshi
       kdenlive

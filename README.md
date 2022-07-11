@@ -10,7 +10,5 @@ This replaces my dotfiles.
 
 Kmonad layer (caps ctrl)
 play around with telescope
-
-sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
-sudo nix flake update
-sudo nixos-rebuild switch --upgrade --flake .#tombook
+grc go test
+webcam
