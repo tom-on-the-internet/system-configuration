@@ -8,7 +8,7 @@ This replaces my dotfiles.
 
 ## TODO
 
-Kmonad layer (caps ctrl)
-play around with telescope
-grc go test
-webcam
+- Kmonad layer (caps ctrl)
+- play around with telescope
+- grc go test
+- webcam

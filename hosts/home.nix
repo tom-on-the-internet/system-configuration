@@ -39,6 +39,7 @@
       ksnip
       mdl
       mpv
+      mycli
       nixfmt
       node2nix
       nodePackages.eslint_d
@@ -46,6 +47,7 @@
       nodePackages.prettier
       nodejs
       pcmanfm
+      pgcli
       pulsemixer
       ripgrep
       rofimoji
