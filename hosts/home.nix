@@ -14,6 +14,7 @@
       asciiquarium
       bat
       btop
+      cl-wordle
       exa
       fd
       feh
@@ -75,6 +76,7 @@
       enable = true;
       enableZshIntegration = true;
     };
+    gh = { enable = true; };
   };
 
   services = {

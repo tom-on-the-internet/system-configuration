@@ -12,3 +12,7 @@ This replaces my dotfiles.
 - play around with telescope
 - grc go test
 - webcam
+- snap
+- mycli
+- pgcli
+- terminal urls
