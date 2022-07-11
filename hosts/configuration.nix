@@ -11,14 +11,15 @@
   users.users.${user} = {
     isNormalUser = true;
     extraGroups = [
-      "wheel"
-      "video"
       "audio"
       "camera"
-      "networkmanager"
-      "lp"
-      "scanner"
+      "docker"
       "kvm"
+      "lp"
+      "networkmanager"
+      "scanner"
+      "video"
+      "wheel"
     ];
     shell = pkgs.zsh;
   };
@@ -165,6 +166,8 @@
     blueman.enable = true;
     deluge.enable = true;
   };
+
+  virtualisation.docker.enable = true;
 
   system = { # NixOS settings
     autoUpgrade = { # Allow auto update
