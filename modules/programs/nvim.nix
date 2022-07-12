@@ -29,6 +29,8 @@ in
         disable:
           - lll
           - forbidigo
+          - exhaustivestruct
+          - exhaustruct
       linters-settings:
         nlreturn:
           block-size: 2
