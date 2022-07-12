@@ -105,7 +105,6 @@ null_ls.setup({
 	end,
 	sources = {
 		completion.spell,
-		diagnostics.mdl,
 		diagnostics.eslint,
 		diagnostics.statix,
 		code_actions.eslint,
@@ -142,6 +141,9 @@ null_ls.setup({
 		formatting.goimports,
 		formatting.golines.with({
 			extra_args = { "--base-formatter", "gofumpt" },
+		}),
+		diagnostics.mdl.with({
+			extra_args = { "-r", "~MD013" },
 		}),
 	},
 })
