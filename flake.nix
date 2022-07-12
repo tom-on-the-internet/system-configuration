@@ -14,7 +14,8 @@
 
     nur = { url = "github:nix-community/NUR"; };
 
-    nixgl = { # OpenGL
+    nixgl = {
+      # OpenGL
       url = "github:guibou/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -29,10 +30,11 @@
       user = "tom";
       location = "$HOME/.setup";
 
-    in {
-      nixosConfigurations = (import ./hosts {
+    in
+    {
+      nixosConfigurations = import ./hosts {
         inherit (nixpkgs) lib;
         inherit inputs nixpkgs home-manager nur user location;
-      });
+      };
     };
 }

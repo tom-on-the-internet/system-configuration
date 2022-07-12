@@ -107,7 +107,9 @@ null_ls.setup({
 		completion.spell,
 		diagnostics.mdl,
 		diagnostics.eslint,
+		diagnostics.statix,
 		code_actions.eslint,
+		code_actions.statix,
 		code_actions.shellcheck,
 		formatting.prettier.with({
 			prefer_local = "node_modules/.bin",

@@ -8,7 +8,7 @@ let
     config.allowUnfree = true;
   };
 
-  lib = nixpkgs.lib;
+  inherit (nixpkgs) lib;
   go-overlay = final: prev: {
     golines = pkgs.buildGo118Module rec {
       pname = "golines";
@@ -35,7 +35,8 @@ let
     };
 
   };
-in {
+in
+{
   old-thinkpad = lib.nixosSystem {
     inherit system;
     specialArgs = { inherit inputs user location; };

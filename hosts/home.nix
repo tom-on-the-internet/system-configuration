@@ -62,6 +62,7 @@ in
       shellcheck
       shfmt
       slack
+      statix
       snap
       rnix-lsp
       stylua
