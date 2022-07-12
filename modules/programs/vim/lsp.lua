@@ -169,7 +169,13 @@ lspconfig.terraformls.setup({
 	end,
 })
 
-lspconfig.tflint.setup({})
+lspconfig.tflint.setup({
+	on_attach = function()
+		default()
+	end,
+})
+
+lspconfig.rnix.setup({})
 
 lspconfig.golangci_lint_ls.setup({
 	init_options = {

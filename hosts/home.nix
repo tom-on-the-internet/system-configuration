@@ -1,5 +1,10 @@
 { config, lib, pkgs, user, ... }:
 
+let
+  snap =
+    pkgs.writeShellScriptBin "snap" (builtins.readFile ../rsc/scripts/snap.sh);
+
+in
 {
   imports = (import ../modules/programs) ++ (import ../modules/services)
     ++ (import ../modules/shell) ++ [ ../modules/desktop/sway/home.nix ]
@@ -57,6 +62,8 @@
       shellcheck
       shfmt
       slack
+      snap
+      rnix-lsp
       stylua
       tealdeer
       unrar
