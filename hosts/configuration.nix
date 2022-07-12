@@ -116,12 +116,14 @@
     };
   };
 
-  nix = { # Nix Package Manager settings
+  nix = {
+    # Nix Package Manager settings
     settings = {
       auto-optimise-store = true; # Optimise syslinks
     };
 
-    gc = { # Automatic garbage collection
+    gc = {
+      # Automatic garbage collection
       automatic = true;
       dates = "weekly";
       options = "--delete-older-than 7d";
@@ -169,11 +171,15 @@
 
   virtualisation.docker.enable = true;
 
-  system = { # NixOS settings
-    autoUpgrade = { # Allow auto update
+  system = {
+    # NixOS settings
+    autoUpgrade = {
+      # Allow auto update
       enable = true;
       channel = "https://nixos.org/channels/nixos-unstable";
     };
     stateVersion = "22.05";
   };
+
+  boot = { kernelPackages = pkgs.linuxPackages_latest; };
 }

@@ -5,8 +5,6 @@
     ++ (import ../../modules/hardware);
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
-
     loader = {
       grub = {
         enable = true;

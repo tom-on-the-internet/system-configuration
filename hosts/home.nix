@@ -39,9 +39,9 @@ in
       gow
       grc
       hadolint
+      jq
       kanshi
       kdenlive
-      jq
       killall
       ksnip
       mdl
@@ -57,19 +57,21 @@ in
       pgcli
       pulsemixer
       ripgrep
+      rnix-lsp
       rofimoji
       rsync
       shellcheck
       shfmt
       slack
-      statix
       snap
-      rnix-lsp
+      statix
       stylua
       tealdeer
       unrar
       unzip
       unzip
+      usbutils
+      v4l-utils
       xdg-utils
       yarn2nix
     ];

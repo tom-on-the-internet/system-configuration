@@ -12,7 +12,5 @@ This replaces my dotfiles.
 - play around with telescope
 - grc go test
 - webcam
-- snap
 - mycli
 - pgcli
-- figure out nlreturn https://github.com/ssgreg/nlreturn (block size 2)

@@ -15,9 +15,11 @@ let
           wrapLua (builtins.readFile file)
         else
           builtins.readFile file;
-    in pkgs.lib.strings.concatMapStringsSep "\n" read files;
+    in
+    pkgs.lib.strings.concatMapStringsSep "\n" read files;
 
-in {
+in
+{
   home.file = {
     ".config/golangci/golangci.yaml".text = ''
       output:
@@ -28,6 +30,8 @@ in {
           - lll
           - forbidigo
       linters-settings:
+        nlreturn:
+          block-size: 2
         varnamelen:
           ignore-decls:
             - w http.ResponseWriter
