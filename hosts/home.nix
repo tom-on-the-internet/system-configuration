@@ -62,6 +62,7 @@
       unrar
       unzip
       unzip
+      xdg-utils
       yarn2nix
     ];
 
