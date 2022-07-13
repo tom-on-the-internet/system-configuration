@@ -10,7 +10,7 @@ This replaces my dotfiles.
 
 - Kmonad layer (caps ctrl)
 - play around with telescope
-- grc go test
 - webcam
 - mycli
 - pgcli
+- obs

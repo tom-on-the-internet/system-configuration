@@ -3,6 +3,8 @@
 let
   snap =
     pkgs.writeShellScriptBin "snap" (builtins.readFile ../rsc/scripts/snap.sh);
+  webcam = pkgs.writeShellScriptBin "webcam"
+    (builtins.readFile ../rsc/scripts/webcam.sh);
 
 in
 {
@@ -72,6 +74,7 @@ in
       unzip
       usbutils
       v4l-utils
+      webcam
       xdg-utils
       yarn2nix
     ];
