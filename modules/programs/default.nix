@@ -1,1 +1,1 @@
-[ ./foot.nix ./nvim.nix ]
+[ ./foot.nix ./nvim.nix ./grc.nix ]
