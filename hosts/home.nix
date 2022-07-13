@@ -69,6 +69,9 @@ in
       statix
       stylua
       tealdeer
+      terraform
+      terraform-ls
+      tflint
       unrar
       unzip
       unzip

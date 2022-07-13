@@ -13,3 +13,4 @@ This replaces my dotfiles.
 - pgcli
 - obs
 - varnamelen is
+- longer timeout on starship
