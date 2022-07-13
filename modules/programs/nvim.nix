@@ -38,6 +38,7 @@ in
           ignore-decls:
             - w http.ResponseWriter
             - r *http.Request
+            - is *is.I
     '';
   };
   programs.neovim = {
