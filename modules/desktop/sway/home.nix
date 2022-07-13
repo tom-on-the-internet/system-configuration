@@ -163,19 +163,25 @@
       seat * hide_cursor 10000
       focus_follows_mouse no
 
-      # Brightness
-      bindsym XF86MonBrightnessDown exec light -U 10
-      bindsym XF86MonBrightnessUp exec light -A 10
 
-      bindsym $mod+Semicolon exec copyq show
-      bindsym $mod+i exec grim -g "$(slurp)" - | wl-copy -f -t image/png
-      bindsym $mod+e exec rofimoji -a copy
-      bindsym $mod+y exec makoctl dismiss -a
-      bindsym $mod+m exec /home/tom/temp/display-config.sh
-      bindsym $mod+f exec killall -SIGUSR1 .waybar-wrapped
-
-      # Volume
       bindsym {
+        # brightness
+        XF86MonBrightnessDown exec light -U 10
+        XF86MonBrightnessUp exec light -A 10
+
+        $mod+Semicolon exec copyq show
+        $mod+i exec grim -g "$(slurp)" - | wl-copy -f -t image/png
+        $mod+e exec rofimoji -a copy
+        $mod+y exec makoctl dismiss -a
+        $mod+m exec /home/tom/temp/display-config.sh
+        $mod+f exec killall -SIGUSR1 .waybar-wrapped
+
+        # webcam
+        $mod+shift+w exec webcam show
+        $mod+Ctrl+minus exec webcam zoom_out
+        $mod+Ctrl+equal exec webcam zoom_in
+
+        # volume
         XF86AudioRaiseVolume  exec pamixer -i 5
         XF86AudioLowerVolume  exec pamixer -d 5
         XF86AudioMute         exec pamixer -t

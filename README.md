@@ -9,7 +9,7 @@ This replaces my dotfiles.
 ## TODO
 
 - play around with telescope
-- webcam
 - mycli
 - pgcli
 - obs
+- varnamelen is

@@ -75,6 +75,7 @@ in
       usbutils
       v4l-utils
       webcam
+      wev
       xdg-utils
       yarn2nix
     ];
