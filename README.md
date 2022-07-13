@@ -8,7 +8,6 @@ This replaces my dotfiles.
 
 ## TODO
 
-- Kmonad layer (caps ctrl)
 - play around with telescope
 - webcam
 - mycli
