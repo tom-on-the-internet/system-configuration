@@ -23,8 +23,8 @@ require("packer").startup(function()
 		end,
 	})
 	use("lukas-reineke/cmp-rg")
-	use("kamykn/spelunker.vim")
-	use("kamykn/popup-menu.nvim")
+	use({ "kamykn/spelunker.vim", opt = true, event = "WinEnter" })
+	use({ "kamykn/popup-menu.nvim", opt = true, event = "WinEnter" })
 	use("lukas-reineke/indent-blankline.nvim")
 	use("neoclide/jsonc.vim")
 	use("neovim/nvim-lspconfig")
@@ -152,7 +152,6 @@ cmp.setup({
 		{ name = "buffer", keyword_length = 3 },
 		{ name = "rg", keyword_length = 3 },
 		{ name = "path", keyword_length = 5 },
-		{ name = "spell" },
 	},
 	formatting = {
 		format = require("lspkind").cmp_format({
@@ -208,8 +207,6 @@ require("nvim-treesitter.configs").setup({
 	context_commentstring = { enable = true, enable_autocmd = false },
 })
 
-require("luasnip/loaders/from_vscode").load()
-
 vim.cmd([[highlight IndentBlanklineIndent1 guifg=#3a3a3a gui=nocombine]])
 
 require("indent_blankline").setup({
@@ -237,5 +234,7 @@ require("leaf").setup({
 	overrides = {},
 	theme = "darkest", -- default, alternatives: "dark", "lighter", "darker", "lightest", "darkest"
 })
+
+require("luasnip.loaders.from_vscode").lazy_load()
 
 vim.cmd("colorscheme leaf")

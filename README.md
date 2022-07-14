@@ -12,5 +12,4 @@ This replaces my dotfiles.
 - mycli
 - pgcli
 - obs
-- varnamelen is
 - longer timeout on starship
