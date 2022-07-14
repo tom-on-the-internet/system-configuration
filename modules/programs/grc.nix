@@ -21,6 +21,9 @@
       regexp=--- FAIL: .*
       colour=red
       -
+      regexp=^FAIL.*
+      colour=red
+      -
       regexp=[^\s]+\.go(:\d+)?
       colour=cyan
     '';
