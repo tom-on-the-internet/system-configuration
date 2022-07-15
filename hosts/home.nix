@@ -41,6 +41,7 @@ in
       gow
       grc
       hadolint
+      hugo
       jq
       kanshi
       kdenlive
