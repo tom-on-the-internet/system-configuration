@@ -15,14 +15,14 @@ end
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 local default = function(client, bufnr)
-	local telescope = require("telescope.builtin")
+	local telescopeBuiltins = require("telescope.builtin")
 	vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
 	vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = 0 })
 	vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, { buffer = 0 })
 	vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = 0 })
-	vim.keymap.set("n", "gr", telescope.lsp_references, { buffer = 0 })
-	vim.keymap.set("n", "gw", telescope.lsp_document_symbols, { buffer = 0 })
-	-- vim.keymap.set("n", "g?", vim.lsp.diagnostic.show_line_diagnostics, { buffer = 0 })
+	vim.keymap.set("n", "gr", telescopeBuiltins.lsp_references, { buffer = 0 })
+	vim.keymap.set("n", "gw", telescopeBuiltins.lsp_document_symbols, { buffer = 0 })
+	vim.keymap.set("n", "<leader>t", telescopeBuiltins.treesitter, { buffer = 0 })
 	vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = 0 })
 	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = 0 })
 	vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next, { buffer = 0 })
@@ -104,7 +104,6 @@ null_ls.setup({
 		default(client, bufnr)
 	end,
 	sources = {
-		completion.spell,
 		diagnostics.eslint,
 		diagnostics.statix,
 		code_actions.eslint,

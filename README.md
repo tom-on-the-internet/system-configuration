@@ -12,4 +12,3 @@ This replaces my dotfiles.
 - mycli
 - pgcli
 - obs
-- longer timeout on starship

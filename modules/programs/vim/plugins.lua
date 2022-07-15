@@ -44,7 +44,10 @@ require("packer").startup(function()
 	use("tpope/vim-repeat")
 	use("tpope/vim-surround")
 	use("wbthomason/packer.nvim")
-	use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
+	use({
+		"nvim-telescope/telescope.nvim",
+		requires = { { "nvim-lua/plenary.nvim" }, { "nvim-telescope/telescope-github.nvim" } },
+	})
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use({ "ray-x/lsp_signature.nvim" })
 end)
@@ -95,7 +98,9 @@ require("telescope").setup({
 		color_devicons = true,
 	},
 })
+
 require("telescope").load_extension("fzf")
+require("telescope").load_extension("gh")
 
 function find_files_all()
 	require("telescope.builtin").find_files({ hidden = true, no_ignore = true })
