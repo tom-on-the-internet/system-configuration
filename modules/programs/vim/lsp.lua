@@ -190,3 +190,5 @@ lspconfig.golangci_lint_ls.setup({
 		},
 	},
 })
+
+lspconfig.yamlls.setup({})
