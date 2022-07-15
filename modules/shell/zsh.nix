@@ -80,7 +80,11 @@
       enableZshIntegration = true;
     };
 
-    starship = { enable = true; };
+    starship = {
+      enable = true;
+      enableZshIntegration = true;
+      settings = { scan_timeout = 100; };
+    };
   };
 
 }
