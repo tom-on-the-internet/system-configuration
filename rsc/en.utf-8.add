@@ -351,3 +351,7 @@ userdata
 tftpl
 msec
 treesitter
+hostname
+pipewire
+mako
+rofi
