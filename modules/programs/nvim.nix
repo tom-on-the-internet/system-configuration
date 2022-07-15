@@ -27,14 +27,18 @@ in
       linters:
         enable-all: true
         disable:
-          - lll
-          - forbidigo
+          - dupl
           - exhaustivestruct
           - exhaustruct
+          - forbidigo
+          - lll
+          - tagliatelle
       linters-settings:
         nlreturn:
           block-size: 2
         varnamelen:
+          ignore-names:
+            - tc
           ignore-decls:
             - w http.ResponseWriter
             - r *http.Request
