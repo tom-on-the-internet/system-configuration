@@ -55,6 +55,7 @@ in
       nodePackages.eslint_d
       nodePackages.intelephense
       nodePackages.prettier
+      nodePackages.yaml-language-server
       nodejs
       pcmanfm
       pgcli
