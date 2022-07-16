@@ -6,8 +6,6 @@
       enable = true;
       settings = {
         main = {
-          # font = "monospace:size=16";
-          # line-height = "20";
           font = "monospace:size=12";
           line-height = "16";
         };

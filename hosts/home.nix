@@ -50,6 +50,7 @@ in
       mdl
       mpv
       mycli
+      neofetch
       nixfmt
       node2nix
       nodePackages.eslint_d
