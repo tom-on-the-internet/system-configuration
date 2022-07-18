@@ -8,4 +8,4 @@ This replaces my dotfiles.
 
 ## TODO
 
-- ...
+- Figure out a nice way of seeing git changes

@@ -1,3 +1,15 @@
+_G.__luacache_config = {
+	chunks = {
+		enable = true,
+		path = vim.fn.stdpath("cache") .. "/luacache_chunks",
+	},
+	modpaths = {
+		enable = true,
+		path = vim.fn.stdpath("cache") .. "/luacache_modpaths",
+	},
+}
+require("impatient")
+
 require("packer").startup(function()
 	use("L3MON4D3/LuaSnip")
 	use({
@@ -22,6 +34,7 @@ require("packer").startup(function()
 			require("gitsigns").setup()
 		end,
 	})
+	use("lewis6991/impatient.nvim")
 	use("lukas-reineke/cmp-rg")
 	use({ "kamykn/spelunker.vim", opt = true, event = "WinEnter" })
 	use({ "kamykn/popup-menu.nvim", opt = true, event = "WinEnter" })
