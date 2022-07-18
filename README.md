@@ -8,7 +8,4 @@ This replaces my dotfiles.
 
 ## TODO
 
-- play around with telescope
-- mycli
-- pgcli
-- obs
+- ...

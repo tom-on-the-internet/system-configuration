@@ -35,7 +35,7 @@ let mapleader = ' '
 nnoremap <leader>f :Telescope find_files<cr>
 nnoremap <leader>a :lua find_files_all()<cr>
 nnoremap <leader>h :Telescope oldfiles<cr>
-nnoremap <leader>r :Telescope registers<cr>
+nnoremap <leader>lr :Telescope registers<cr>
 nnoremap <leader>p :!prettier -w %<cr>
 nnoremap <leader>y @q
 nnoremap <leader><space> :Telescope live_grep<cr>
