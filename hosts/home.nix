@@ -60,6 +60,8 @@ in
       nodejs
       pcmanfm
       pgcli
+      php
+      php81Packages.composer
       pulsemixer
       ripgrep
       rnix-lsp
