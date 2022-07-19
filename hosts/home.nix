@@ -103,6 +103,7 @@ in
       enable = true;
       plugins = with pkgs.obs-studio-plugins; [ wlrobs ];
     };
+    zathura = { enable = true; };
   };
 
   services = {

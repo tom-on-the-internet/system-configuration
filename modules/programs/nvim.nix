@@ -43,6 +43,7 @@ in
             - w http.ResponseWriter
             - r *http.Request
             - is *is.I
+            - wg sync.WaitGroup
     '';
   };
   programs.neovim = {
