@@ -25,8 +25,7 @@ local default = function(client, bufnr)
 	vim.keymap.set("n", "<leader>t", telescopeBuiltins.treesitter, { buffer = 0 })
 	vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = 0 })
 	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = 0 })
-	vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next, { buffer = 0 })
-	vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, { buffer = 0 })
+	vim.keymap.set("n", "<leader>ds", "<cmd>TroubleToggle<cr>", { buffer = 0 })
 	vim.keymap.set("n", "<leader>ld", "<cmd>Telescope diagnostics<cr>", { buffer = 0 })
 
 	if client and client.supports_method("textDocument/formatting") then
@@ -51,7 +50,7 @@ lspconfig.gopls.setup({
 		gopls = {
 			analyses = {
 				nilness = true,
-				unusedparams = true,
+				unusedparams = false,
 				useany = true,
 				unusedwrite = true,
 			},

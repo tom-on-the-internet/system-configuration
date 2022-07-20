@@ -52,6 +52,7 @@ in
       mpv
       mycli
       neofetch
+      netcat
       nixfmt
       node2nix
       nodePackages.eslint_d

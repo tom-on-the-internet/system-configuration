@@ -64,6 +64,13 @@ require("packer").startup(function()
 	})
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use({ "ray-x/lsp_signature.nvim" })
+	use({
+		"folke/trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+		config = function()
+			require("trouble").setup({})
+		end,
+	})
 end)
 
 require("telescope").setup({
