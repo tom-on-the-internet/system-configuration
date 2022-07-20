@@ -23,6 +23,9 @@ local default = function(client, bufnr)
 	vim.keymap.set("n", "gr", telescopeBuiltins.lsp_references, { buffer = 0 })
 	vim.keymap.set("n", "gw", telescopeBuiltins.lsp_document_symbols, { buffer = 0 })
 	vim.keymap.set("n", "<leader>t", telescopeBuiltins.treesitter, { buffer = 0 })
+	vim.keymap.set("n", "<leader>n", function()
+		require("hop").hint_words({ keys = "tnseriao", multi_windows = true })
+	end, { buffer = 0 })
 	vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = 0 })
 	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = 0 })
 	vim.keymap.set("n", "<leader>ds", "<cmd>TroubleToggle<cr>", { buffer = 0 })
@@ -58,13 +61,13 @@ lspconfig.gopls.setup({
 			usePlaceholders = true,
 			experimentalUseInvalidMetadata = true,
 			hints = {
-				assignVariableTypes = true,
-				compositeLiteralFields = true,
-				compositeLiteralTypes = true,
-				constantValues = true,
-				functionTypeParameters = true,
-				parameterNames = true,
-				rangeVariableTypes = true,
+				assignVariableTypes = false,
+				compositeLiteralFields = false,
+				compositeLiteralTypes = false,
+				constantValues = false,
+				functionTypeParameters = false,
+				parameterNames = false,
+				rangeVariableTypes = false,
 			},
 		},
 	},
