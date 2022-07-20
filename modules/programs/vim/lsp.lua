@@ -149,13 +149,13 @@ null_ls.setup({
 	},
 })
 
-local emmetCapabilities = vim.lsp.protocol.make_client_capabilities()
-emmetCapabilities.textDocument.completion.completionItem.snippetSupport = true
+-- local emmetCapabilities = vim.lsp.protocol.make_client_capabilities()
+-- emmetCapabilities.textDocument.completion.completionItem.snippetSupport = true
 
-lspconfig.emmet_ls.setup({
-	capabilities = emmetCapabilities,
-	filetypes = { "html", "css", "typescriptreact", "javascriptreact" },
-})
+-- lspconfig.emmet_ls.setup({
+-- 	capabilities = emmetCapabilities,
+-- 	filetypes = { "html", "css", "typescriptreact", "javascriptreact" },
+-- })
 
 local terraformCapabilities = vim.lsp.protocol.make_client_capabilities()
 terraformCapabilities.textDocument.completion.completionItem.snippetSupport = true
