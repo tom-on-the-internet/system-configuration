@@ -85,6 +85,13 @@ require("packer").startup(function()
 			})
 		end,
 	})
+	use({
+		"ruifm/gitlinker.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("gitlinker").setup()
+		end,
+	})
 end)
 
 require("telescope").setup({
