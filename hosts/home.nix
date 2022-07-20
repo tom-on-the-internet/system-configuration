@@ -47,6 +47,7 @@ in
       kdenlive
       killall
       ksnip
+      libtelnet
       mdl
       mpv
       mycli
