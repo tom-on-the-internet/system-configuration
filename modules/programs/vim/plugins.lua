@@ -49,14 +49,12 @@ require("packer").startup(function()
 	use("onsails/lspkind-nvim")
 	use("rafamadriz/friendly-snippets")
 	use("ray-x/go.nvim")
-	use("ray-x/guihua.nvim")
 	use("daschw/leaf.nvim")
 	use("saadparwaiz1/cmp_luasnip")
 	use("tpope/vim-abolish")
 	use("tpope/vim-commentary")
 	use("tpope/vim-fugitive")
 	use("tpope/vim-repeat")
-	use("tpope/vim-surround")
 	use("wbthomason/packer.nvim")
 	use({
 		"nvim-telescope/telescope.nvim",
@@ -77,6 +75,14 @@ require("packer").startup(function()
 		config = function()
 			-- you can configure Hop the way you like here; see :h hop-config
 			require("hop").setup()
+		end,
+	})
+	use({
+		"kylechui/nvim-surround",
+		config = function()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
 		end,
 	})
 end)
