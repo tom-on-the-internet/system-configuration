@@ -28,6 +28,7 @@ in
       file
       gcc
       gimp
+      glow
       gnumake
       go_1_18
       gofumpt
