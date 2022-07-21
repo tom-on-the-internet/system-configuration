@@ -18,9 +18,9 @@
         mv = "mv -iv";
         rm = "rm -v";
         ssh = "kitty +kitten ssh";
-        tn = "nvim ~/Dropbox/notes/notes.txt";
+        tn = "nvim ~/Dropbox/notes/notes.md";
         tree = "tree -C -a";
-        wn = "nvim ~/Dropbox/notes/work-notes.txt";
+        wn = "nvim ~/Dropbox/notes/work-notes.md";
       };
       shellGlobalAliases = {
         "..." = "../..";
