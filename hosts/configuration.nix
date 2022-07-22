@@ -163,10 +163,11 @@
   };
 
   services = {
-    tlp.enable = true;
     auto-cpufreq.enable = true;
     blueman.enable = true;
+    dbus.enable = true;
     deluge.enable = true;
+    tlp.enable = true;
   };
 
   virtualisation.docker.enable = true;

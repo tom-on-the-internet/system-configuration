@@ -368,3 +368,5 @@ figlet
 dbus
 systemctl
 autotiling
+gsettings
+datadir

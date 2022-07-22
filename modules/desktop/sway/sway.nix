@@ -68,7 +68,7 @@ in
 
     loginShellInit = ''
       if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-        exec sway --unsupported-gpu
+        exec sway --unsupported-gpu > /home/tom/sway.log 2>&1
       fi
     '';
   };
