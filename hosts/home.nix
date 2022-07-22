@@ -22,10 +22,12 @@ in
       bat
       btop
       cl-wordle
+      entr
       exa
       fd
       feh
       file
+      figlet
       gcc
       gimp
       glow
@@ -40,6 +42,7 @@ in
       gotests
       gotools
       gow
+      graph-easy
       grc
       hadolint
       hugo
@@ -73,6 +76,7 @@ in
       shellcheck
       shfmt
       slack
+      slides
       snap
       statix
       stylua

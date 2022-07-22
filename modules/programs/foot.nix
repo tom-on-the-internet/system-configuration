@@ -6,12 +6,12 @@
       enable = true;
       settings = {
         main = {
-          font = "monospace:size=12";
+          font = "monospace:size=12, Noto Color Emoji:size=10";
           line-height = "16";
         };
 
         colors = {
-          alpha = "0.95";
+          alpha = "0.92";
           background = "161417";
           foreground = "f7faf3";
 
